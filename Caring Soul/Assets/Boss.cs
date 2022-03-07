@@ -19,7 +19,7 @@ public class Boss : MonoBehaviour
 
         animator.SetTrigger("Hurt");
          
-        if(CurrentHealth <= 0);
+        if(CurrentHealth <= 0)
         {
             Die();
         }
@@ -29,9 +29,9 @@ public class Boss : MonoBehaviour
     {
         Debug.Log("Enemy Died!");
 
-        animator.SetBoolean("IsDead", true);
+        animator.SetBool("IsDead", true);
 
-        GetComponen<Collider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
     }
 }
